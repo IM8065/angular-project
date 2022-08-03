@@ -1,0 +1,43 @@
+<div class="form-container">
+  <form [formGroup]="claimForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="policyNumber"> Policy Number </label>
+      <input
+        id="policyNumber"
+        type="number"
+        formControlName="policyNumber"
+        minlength="8"
+      />
+      <p
+        *ngIf="claimForm.controls['policyNumber'].errors?.['required'] && 
+      claimForm.controls['policyNumber'].touched"
+      >
+        field is required
+      </p>
+      <p *ngIf="claimForm.controls['policyNumber'].errors?.['minlength']">
+        field needs to be at least 8 characters long
+      </p>
+    </div>
+
+    <div>
+      <label for="insuranceType"> Insurance Type </label>
+      <input id="insuranceType" type="text" formControlName="insuranceType" />
+      <p
+        *ngIf="claimForm.controls['insuranceType'].errors?.['required'] && claimForm.controls['insuranceType'].touched"
+      >
+        field is required
+      </p>
+    </div>
+
+    <div>
+      <label for="claimReason"> Claim Reason </label>
+      <input id="claimReason" type="text" formControlName="claimReason" />
+      <p
+        *ngIf="claimForm.controls['claimReason'].errors?.['required'] && claimForm.controls['claimReason'].touched"
+      >
+        field is required
+      </p>
+    </div>
+    <button class="button" type="submit">Submit Claim</button>
+  </form>
+</div>

@@ -1,0 +1,22 @@
+.main-component {
+  width: 70%;
+  margin: 0 auto;
+}
+
+button {
+  padding: 14px 20px;
+  background-color: #4caf50;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  border: 0;
+  margin: 8px 0;
+}
+
+.claim-preview-container {
+  background-color: #f2f2f2;
+  cursor: pointer;
+  padding: 8px;
+  margin: 8px;
+}

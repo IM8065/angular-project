@@ -1,0 +1,10 @@
+<div class="claim-modal">
+  <h1>Hey What's up</h1>
+  <div *ngIf="currentClaim">
+    <p>Policy Number: {{ currentClaim.policyNumber }}</p>
+    <p>Insurance Type: {{ currentClaim.insuranceType }}</p>
+    <p>Claim Reason: {{ currentClaim.claimReason }}</p>
+  </div>
+</div>
+
+<!-- <ng-content></ng-content> -->

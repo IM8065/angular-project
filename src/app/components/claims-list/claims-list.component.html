@@ -1,0 +1,16 @@
+<div class="main-component">
+  <h1>View Your Claims</h1>
+  <button (click)="useClaimData()">Click Me!</button>
+  <div *ngIf="claimList">
+    <div *ngFor="let claim of claimList">
+      <div (click)="viewClaim(claim.id)" class="claim-preview-container">
+        <p>{{ claim.insuranceType }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div (click)="viewClaim(claim.id)" class="claim-preview-container">
+  <p>{{ claim.firstName }} {{ claim.lastName }}</p>
+</div> -->
+
+<!-- [routerLink]="[{ outlets: { appear: ['create-claim'] } }] -->
